@@ -6,18 +6,9 @@ SmartScheduler ini adalah suatu mini project scheduler yang membantu untuk menga
 Setiap job memiliki 2 parameter utama:
 - processing time (p)
 - deadline (d)
+
 Tujuan utamanya adalah untuk meminimalkan total waktu penyelesaian tugas sekaligus untuk meningkatkan jumlah tugas yang selesai sebelum deadline (SLA)
 Algoritma yang digunakan adalah Earliest Deadline First (EDF) dengan tie-breaker tambahan menggunakan Shortest Processing Time (SPT). Saya menggunakan EDF dikarenakan pada real cloud system atau CPU cluster deadline adalah faktor yang terpenting. EDF adalah suatu greedy strategi yang sudah sangat dikenal dalam real-time scheduling dan memiliki nilai trade-off yang terbaik untuk runtime vs near-optimal result. Sorting hanya O(n log n) sehingga scalable di konteks production.
-
-# Struktur Repo
-SmartScheduler-DAA/
- ├─ data/
- │   └─ sample.txt
- ├─ report/
- │   └─ SmartScheduler_Report_Trianto_01085240015.pdf
- └─ src/
-     └─ main.cpp
-README.md
 
 # Menjalankan Program
 1. Masuk ke folder src/
